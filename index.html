@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Alana Soarez Ferreira | Currículo</title>
 
 <style>
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  background-color: #0b0f1a;
+  background: #0b0f1a;
   color: #e5e7eb;
 }
 
@@ -21,11 +20,12 @@ body {
 }
 
 h1 {
-  margin-bottom: 6px;
+  margin-bottom: 4px;
 }
 
 .subtitle {
   color: #9ca3af;
+  margin-bottom: 16px;
 }
 
 a {
@@ -34,10 +34,11 @@ a {
 }
 
 .card {
-  background-color: #111827;
-  border-radius: 14px;
+  background: #111827;
+  border-radius: 16px;
   padding: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 22px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
 }
 
 .card h2 {
@@ -45,55 +46,84 @@ a {
   color: #38bdf8;
 }
 
-/* Timeline */
-.timeline {
-  border-left: 3px solid #1f2937;
-  padding-left: 20px;
-}
+/* ===== EXPERIÊNCIA ===== */
 
 .job {
-  margin-bottom: 28px;
-  position: relative;
-}
-
-.job::before {
-  content: "";
-  width: 14px;
-  height: 14px;
-  background-color: #3b82f6;
-  border-radius: 50%;
-  position: absolute;
-  left: -28px;
-  top: 5px;
+  margin-bottom: 18px;
 }
 
 .job-title {
-  color: #facc15;
   font-weight: bold;
+  color: #facc15;
 }
 
 .job-company {
+  font-size: 14px;
   color: #9ca3af;
+}
+
+/* ===== TIMELINE CONCENTRIX ===== */
+
+.timeline {
+  position: relative;
+  margin-left: 10px;
+  padding-left: 20px;
+  border-left: 3px solid #1f2937;
+}
+
+.timeline .job {
+  position: relative;
+}
+
+.timeline .job::before {
+  content: "";
+  position: absolute;
+  left: -31px;
+  top: 4px;
+  width: 14px;
+  height: 14px;
+  background: #3b82f6;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #3b82f6;
+}
+
+/* ===== IDIOMAS ===== */
+
+.skill {
+  margin-bottom: 18px;
+}
+
+.skill span {
   font-size: 14px;
 }
 
-/* Skills */
-.skill {
-  margin-bottom: 16px;
-}
-
 .bar {
-  background-color: #020617;
-  border-radius: 999px;
+  background: #020617;
   height: 10px;
+  border-radius: 999px;
   overflow: hidden;
+  margin-top: 6px;
 }
 
 .fill {
   height: 100%;
   width: 0;
+  border-radius: 999px;
   background: linear-gradient(90deg, #3b82f6, #22d3ee);
-  transition: width 1.5s ease;
+  transition: width 1.8s ease;
+}
+
+/* ===== ANIMAÇÃO DE ENTRADA ===== */
+
+.fade {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s ease;
+}
+
+.fade.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 </style>
 </head>
@@ -112,75 +142,85 @@ a {
     <a href="https://www.linkedin.com/in/alana-soarez-ferreira-016a5b314/" target="_blank">LinkedIn</a>
   </p>
 
-  <div class="card">
+  <div class="card fade">
     <h2>Resumo Profissional</h2>
     <p>
-      Profissional especializada em atendimento ao cliente, liderança operacional
-      e análise de dados, com experiência em ambientes de alta demanda,
-      gestão de indicadores, elaboração de relatórios e melhoria contínua.
+      Profissional com trajetória construída do atendimento à liderança operacional,
+      atuando em ambientes de alta demanda, com foco em performance, indicadores,
+      análise de dados e melhoria contínua.
     </p>
   </div>
 
-  <div class="card">
+  <div class="card fade">
     <h2>Experiência Profissional</h2>
 
+    <div class="job">
+      <div class="job-title">Supervisor de Teleatendimento I</div>
+      <div class="job-company">JR Promoções – S. Condor | Jan 2025 – Ago 2025</div>
+      <ul>
+        <li>Gestão de equipe e indicadores (TMA, conversão, absenteísmo).</li>
+        <li>Monitorias, feedbacks e planos de ação.</li>
+        <li>Reuniões estratégicas e relatórios operacionais.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-title">Recepcionista / Garçonete</div>
+      <div class="job-company">Chaplin Esfiharia | Out 2024 – Jan 2025</div>
+      <ul>
+        <li>Atendimento ao cliente e controle de fluxo.</li>
+        <li>Pedidos, reservas e organização do ambiente.</li>
+      </ul>
+    </div>
+
+    <h3 style="color:#38bdf8;margin-top:30px;">Concentrix</h3>
+
     <div class="timeline">
-
-      <div class="job">
-        <div class="job-title">Supervisor de Teleatendimento I</div>
-        <div class="job-company">JR Promoções – S. Condor | Jan 2025 – Ago 2025</div>
-        <ul>
-          <li>Gestão de equipe e indicadores operacionais.</li>
-          <li>Monitorias, feedbacks e planos de ação.</li>
-          <li>Relatórios e reuniões estratégicas.</li>
-        </ul>
-      </div>
-
       <div class="job">
         <div class="job-title">Suporte Técnico</div>
-        <div class="job-company">Concentrix – Smiles GOL | Set 2023 – Jun 2024</div>
+        <div class="job-company">Smiles GOL | Set 2023 – Jun 2024</div>
         <ul>
-          <li>Suporte técnico aos agentes.</li>
-          <li>Documentação e treinamento.</li>
+          <li>Suporte aos agentes e documentação de processos.</li>
+          <li>Criação de manuais e treinamentos.</li>
         </ul>
       </div>
 
       <div class="job">
         <div class="job-title">Agente de Teleatendimento</div>
-        <div class="job-company">Concentrix – Claro RCV | Set 2022 – Set 2023</div>
+        <div class="job-company">Claro RCV | Set 2022 – Set 2023</div>
         <ul>
           <li>Atendimento ao cliente e suporte administrativo.</li>
         </ul>
       </div>
-
     </div>
+
   </div>
 
-  <div class="card">
+  <div class="card fade">
     <h2>Idiomas</h2>
 
     <div class="skill">
-      Português — Nativo
-      <div class="bar"><div class="fill" style="width:100%"></div></div>
+      <span>Português — Nativo</span>
+      <div class="bar"><div class="fill" data-level="100%"></div></div>
     </div>
 
     <div class="skill">
-      Inglês — Avançado
-      <div class="bar"><div class="fill" style="width:85%"></div></div>
+      <span>Inglês — Avançado</span>
+      <div class="bar"><div class="fill" data-level="85%"></div></div>
     </div>
 
     <div class="skill">
-      Francês — Básico
-      <div class="bar"><div class="fill" style="width:40%"></div></div>
+      <span>Francês — Básico</span>
+      <div class="bar"><div class="fill" data-level="40%"></div></div>
     </div>
 
     <div class="skill">
-      Japonês — Básico
-      <div class="bar"><div class="fill" style="width:30%"></div></div>
+      <span>Japonês — Básico</span>
+      <div class="bar"><div class="fill" data-level="30%"></div></div>
     </div>
   </div>
 
-  <div class="card">
+  <div class="card fade">
     <h2>Formação</h2>
     <p>
       Licenciatura em Matemática (2022)<br>
@@ -190,5 +230,21 @@ a {
 
 </div>
 
+<script>
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
+
+      entry.target.querySelectorAll(".fill").forEach(bar => {
+        bar.style.width = bar.dataset.level;
+      });
+    }
+  });
+}, { threshold: 0.3 });
+
+document.querySelectorAll(".fade").forEach(el => observer.observe(el));
+</script>
+
 </body>
-  </html>
+</html>
