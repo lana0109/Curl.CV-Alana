@@ -7,12 +7,12 @@
 
 <style>
 :root {
-  --bg: #060a08;
-  --card: #0b1511;
-  --green: #1faa6f;
-  --green-soft: #3ddc97;
-  --text: #e6f1ec;
-  --muted: #9fb3aa;
+  --bg: #0b1210;
+  --card: #0f1f17;
+  --green: #22c55e;
+  --green-soft: #4ade80;
+  --text: #e5e7eb;
+  --muted: #9ca3af;
 }
 
 body {
@@ -25,7 +25,7 @@ body {
 .container {
   max-width: 900px;
   margin: auto;
-  padding: 28px;
+  padding: 24px;
 }
 
 a {
@@ -35,14 +35,14 @@ a {
 
 .card {
   background: var(--card);
-  border-radius: 20px;
-  padding: 26px;
-  margin-bottom: 26px;
-  box-shadow: 0 20px 50px rgba(0,0,0,.75);
+  border-radius: 18px;
+  padding: 22px;
+  margin-bottom: 22px;
+  box-shadow: 0 15px 40px rgba(0,0,0,.6);
 }
 
-h1 { margin-bottom: 6px; }
-.subtitle { color: var(--muted); margin-bottom: 16px; }
+h1 { margin-bottom: 4px; }
+.subtitle { color: var(--muted); margin-bottom: 14px; }
 
 /* ===== ACCORDION ===== */
 .accordion-header {
@@ -54,7 +54,7 @@ h1 { margin-bottom: 6px; }
 }
 
 .accordion-header span {
-  font-size: 18px;
+  font-size: 20px;
   transition: transform .4s;
 }
 
@@ -65,28 +65,26 @@ h1 { margin-bottom: 6px; }
 .accordion-content {
   max-height: 0;
   overflow: hidden;
-  transition: max-height .8s ease;
+  transition: max-height .7s ease;
 }
 
 .accordion.open .accordion-content {
-  max-height: 4000px;
+  max-height: 3000px;
 }
 
-/* ===== OBJETIVO ===== */
+/* ===== TEXTO OBJETIVO ===== */
 .preview {
-  margin-top: 12px;
   color: var(--muted);
 }
 
 .read-more {
-  margin-top: 10px;
+  margin-top: 8px;
   color: var(--green-soft);
   font-weight: bold;
-  cursor: pointer;
 }
 
-/* ===== EXPERIÊNCIA ===== */
-.job { margin-bottom: 22px; }
+/* ===== EXPERIÊNCIAS ===== */
+.job { margin-bottom: 20px; }
 
 .job-title {
   color: var(--green-soft);
@@ -101,8 +99,8 @@ h1 { margin-bottom: 6px; }
 /* ===== TIMELINE ===== */
 .timeline {
   border-left: 3px solid var(--green);
-  padding-left: 22px;
-  margin-top: 18px;
+  padding-left: 20px;
+  margin-top: 16px;
 }
 
 .timeline .job {
@@ -112,8 +110,8 @@ h1 { margin-bottom: 6px; }
 .timeline .job::before {
   content: "●";
   position: absolute;
-  left: -33px;
-  top: 2px;
+  left: -31px;
+  top: 0;
   color: var(--green);
 }
 
@@ -122,8 +120,16 @@ h1 { margin-bottom: 6px; }
   margin-bottom: 22px;
 }
 
+.lang-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  color: var(--green-soft);
+}
+
 .bar {
-  background: #020705;
+  background: #020617;
   height: 10px;
   border-radius: 999px;
   overflow: hidden;
@@ -163,39 +169,28 @@ LinkedIn
 
 <div class="accordion-content">
 <p>
-Profissional com trajetória construída a partir de experiências práticas e
-multidisciplinares, atuando desde a linha de frente no atendimento ao cliente
-até funções de liderança operacional e suporte analítico. Apresento-me como
-uma profissional preparada, responsável e comprometida em contribuir de forma
-estratégica e consistente para os resultados da empresa.
+Com uma trajetória profissional construída a partir de experiências práticas
+e multidisciplinares, atuando desde a linha de frente no atendimento ao cliente
+até funções de liderança e suporte analítico, apresento-me como uma candidata
+preparada e disposta a contribuir de forma significativa com a empresa.
 </p>
 
 <p>
-Especializada em atendimento ao cliente e gestão de operações em ambientes de
-alta demanda, com foco em performance, análise de indicadores operacionais
-(TMA, absenteísmo e taxas de conversão), elaboração de relatórios gerenciais
-e desenvolvimento de planos de ação orientados à melhoria contínua e eficiência
-dos processos.
+Profissional especializada em atendimento ao cliente, coordenando operações
+em ambientes de alta demanda, com foco em performance, gestão de indicadores
+(TMA, absenteísmo e conversão), elaboração de relatórios e planos de ação,
+análise crítica de dados e melhoria contínua.
 </p>
 
 <p>
-Possuo perfil analítico, visão crítica de dados e facilidade para liderança,
-comunicação e trabalho em equipe. Sou pontual, organizada e adaptável,
-habilidades que me permitem transitar entre demandas administrativas,
-operacionais e estratégicas com segurança.
-</p>
-
-<p>
-Domino ferramentas essenciais como Excel Avançado, Canva, Zendesk e Sabre,
-o que possibilita atuação integrada entre áreas administrativas, atendimento
-ao cliente, suporte técnico e criação de materiais de apoio e comunicação
-interna.
+Profissional pontual, com facilidade de comunicação e liderança. Domino
+Excel Avançado, Canva, Zendesk e Sabre, transitando entre áreas administrativas,
+atendimento e criação de materiais de suporte.
 </p>
 </div>
 
 <div class="preview">
-Profissional com trajetória construída a partir de experiências práticas e
-multidisciplinares, atuando desde a linha de frente no atendimento ao cliente...
+Com uma trajetória profissional construída a partir de experiências práticas...
 </div>
 <div class="read-more">Ler mais</div>
 </div>
@@ -220,22 +215,21 @@ multidisciplinares, atuando desde a linha de frente no atendimento ao cliente...
 </div>
 
 <h3 style="color:var(--green)">Concentrix</h3>
-
 <div class="timeline">
 
 <div class="job">
 <div class="job-title">Supervisor de Teleatendimento</div>
-<div class="job-company">Operação Smiles GOL</div>
+<div class="job-company">Smiles GOL</div>
 </div>
 
 <div class="job">
 <div class="job-title">Suporte Técnico</div>
-<div class="job-company">Operação Smiles GOL</div>
+<div class="job-company">Smiles GOL</div>
 </div>
 
 <div class="job">
 <div class="job-title">Agente de Teleatendimento</div>
-<div class="job-company">Operação Claro RCV</div>
+<div class="job-company">Claro RCV</div>
 </div>
 
 </div>
@@ -252,22 +246,22 @@ multidisciplinares, atuando desde a linha de frente no atendimento ao cliente...
 <div class="accordion-content">
 
 <div class="language">
-Português — Nativo
+Português
 <div class="bar"><div class="fill" data-level="100%"></div></div>
 </div>
 
 <div class="language">
-Inglês — Avançado
+Inglês
 <div class="bar"><div class="fill" data-level="85%"></div></div>
 </div>
 
 <div class="language">
-Francês — Básico
+Francês
 <div class="bar"><div class="fill" data-level="40%"></div></div>
 </div>
 
 <div class="language">
-Japonês — Básico
+Japonês
 <div class="bar"><div class="fill" data-level="30%"></div></div>
 </div>
 
