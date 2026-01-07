@@ -16,44 +16,34 @@
       --highlight: #facc15;
     }
 
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
     body {
       margin: 0;
       padding: 24px;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-      background: linear-gradient(135deg, #020617, #020617, #0f172a);
+      font-family: system-ui, sans-serif;
+      background: linear-gradient(135deg, #020617, #0f172a);
       color: var(--text);
-      line-height: 1.6;
     }
 
     .container {
       max-width: 900px;
-      margin: 0 auto;
-      animation: fadeIn 1s ease forwards;
-    }
-
-    header {
-      margin-bottom: 48px;
+      margin: auto;
     }
 
     h1 {
       margin: 0;
-      font-size: 2.5rem;
       color: var(--accent);
+      font-size: 2.4rem;
     }
 
     .subtitle {
       color: var(--muted);
-      margin-top: 6px;
-      font-size: 1.05rem;
+      margin-bottom: 12px;
     }
 
     .contact {
-      margin-top: 12px;
-      font-size: 0.95rem;
+      font-size: 0.9rem;
       color: var(--muted);
     }
 
@@ -62,200 +52,89 @@
       text-decoration: none;
     }
 
-    section {
+    /* Accordion */
+    details {
       background: var(--card);
-      border-radius: 18px;
-      padding: 24px;
-      margin-bottom: 24px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-      opacity: 0;
-      transform: translateY(20px);
-      animation: slideUp 0.8s ease forwards;
+      border-radius: 16px;
+      margin-bottom: 20px;
+      padding: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,.3);
     }
 
-    section:nth-of-type(1) { animation-delay: 0.2s; }
-    section:nth-of-type(2) { animation-delay: 0.4s; }
-    section:nth-of-type(3) { animation-delay: 0.6s; }
-    section:nth-of-type(4) { animation-delay: 0.8s; }
-
-    h2 {
-      margin-top: 0;
+    summary {
+      cursor: pointer;
+      font-size: 1.3rem;
+      font-weight: 600;
       color: var(--accent2);
-      font-size: 1.4rem;
+      list-style: none;
     }
 
+    summary::-webkit-details-marker { display: none; }
+
+    details[open] summary {
+      margin-bottom: 16px;
+    }
+
+    /* Timeline */
     .timeline {
+      position: relative;
+      padding-left: 24px;
       display: grid;
-      gap: 18px;
+      gap: 24px;
+    }
+
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 6px;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: var(--accent);
     }
 
     .job {
-      border-left: 3px solid var(--accent);
-      padding-left: 16px;
-      transition: transform 0.25s ease, background 0.25s ease;
+      position: relative;
+      padding-left: 24px;
     }
 
-    .job:hover {
-      transform: translateX(6px);
-      background: rgba(56,189,248,0.05);
-      border-radius: 8px;
-      padding-right: 8px;
+    .job::before {
+      content: "";
+      position: absolute;
+      left: -2px;
+      top: 6px;
+      width: 12px;
+      height: 12px;
+      background: var(--accent);
+      border-radius: 50%;
     }
 
     .job-title {
-      font-weight: 600;
       color: var(--highlight);
+      font-weight: 600;
     }
 
     .job-company {
       color: var(--muted);
-      font-size: 0.95rem;
+      font-size: 0.9rem;
     }
 
     ul {
       padding-left: 18px;
-      margin: 0;
     }
 
-    li {
-      margin-bottom: 8px;
+    li { margin-bottom: 6px; }
+
+    /* Skill bars */
+    .skill {
+      margin-bottom: 14px;
     }
 
-    .tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
+    .skill span {
+      font-size: 0.9rem;
     }
 
-    .tag {
-      background: rgba(56,189,248,0.1);
-      color: var(--accent2);
-      padding: 6px 12px;
-      border-radius: 999px;
-      font-size: 0.85rem;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-
-    @keyframes slideUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-  </style>
-</head>
-
-<body>
-  <div class="container">
-
-    <header>
-      <h1>Alana Soarez Ferreira</h1>
-      <div class="subtitle">
-        Administração • Atendimento ao Cliente • Análise de Dados
-      </div>
-      <div class="contact">
-        São José dos Pinhais, PR ·  
-        <a href="mailto:lanasoarez2024@gmail.com">lanasoarez2024@gmail.com</a> ·  
-        (41) 98716-6921 ·  
-        <a href="https://www.linkedin.com/in/alana-soarez-ferreira-016a5b314/" target="_blank">LinkedIn</a>
-      </div>
-    </header>
-
-    <section>
-      <h2>Resumo Profissional</h2>
-      <p>
-        Profissional com trajetória construída a partir de experiências práticas e multidisciplinares,
-        atuando desde a linha de frente no atendimento ao cliente até funções de liderança, suporte técnico
-        e análise de dados. Especializada em ambientes de alta demanda, com foco em performance,
-        indicadores operacionais e melhoria contínua.
-      </p>
-    </section>
-
-    <section>
-      <h2>Experiência Profissional</h2>
-      <div class="timeline">
-
-        <div class="job">
-          <div class="job-title">Supervisor de Teleatendimento I</div>
-          <div class="job-company">JR Promoções – S. Condor | Jan 2025 – Ago 2025</div>
-          <ul>
-            <li>Gestão da rotina de atendimento dos operadores com base em indicadores e dados.</li>
-            <li>Monitorias, feedbacks estruturados e planos de ação para melhoria de performance.</li>
-            <li>Liderança de reuniões estratégicas e acompanhamento diário de métricas.</li>
-            <li>Controle de indicadores como TMA, absenteísmo e taxas de conversão.</li>
-            <li>Elaboração de relatórios e suporte analítico à operação.</li>
-          </ul>
-        </div>
-
-        <div class="job">
-          <div class="job-title">Suporte Técnico / Atendimento</div>
-          <div class="job-company">Concentrix – Operação Smiles GOL | Set 2023 – Jun 2024</div>
-          <ul>
-            <li>Suporte técnico aos agentes de atendimento.</li>
-            <li>Documentação de procedimentos e criação de manuais operacionais.</li>
-            <li>Geração de relatórios e identificação de oportunidades de melhoria.</li>
-            <li>Treinamento e apoio contínuo às equipes.</li>
-          </ul>
-        </div>
-
-        <div class="job">
-          <div class="job-title">Agente de Teleatendimento</div>
-          <div class="job-company">Concentrix – Operação Claro RCV | Set 2022 – Set 2023</div>
-          <ul>
-            <li>Atendimento ao cliente e resolução de dúvidas.</li>
-            <li>Suporte operacional e administrativo.</li>
-          </ul>
-        </div>
-
-        <div class="job">
-          <div class="job-title">Recepcionista / Garçonete</div>
-          <div class="job-company">Chaplin Esfiharia | Out 2024 – Jan 2025</div>
-          <ul>
-            <li>Recepção e atendimento ao cliente.</li>
-            <li>Controle de fluxo, reservas e pedidos.</li>
-            <li>Trabalho em equipe e comunicação interpessoal.</li>
-          </ul>
-        </div>
-
-      </div>
-    </section>
-
-    <section>
-      <h2>Formação</h2>
-      <p>
-        Licenciatura em Matemática (2022)<br>
-        <span class="job-company">Uniasselvi — Curitiba, PR</span>
-      </p>
-    </section>
-
-    <section>
-      <h2>Habilidades & Idiomas</h2>
-
-      <div class="tags">
-        <span class="tag">Excel Avançado</span>
-        <span class="tag">Zendesk</span>
-        <span class="tag">Sabre</span>
-        <span class="tag">Canva</span>
-        <span class="tag">Gestão de Indicadores</span>
-        <span class="tag">Análise de Dados</span>
-        <span class="tag">Liderança</span>
-        <span class="tag">Treinamento de Equipes</span>
-      </div>
-
-      <br>
-
-      <ul>
-        <li>Português — Nativo</li>
-        <li>Inglês — Avançado</li>
-        <li>Francês — Básico</li>
-        <li>Japonês — Básico</li>
-      </ul>
-    </section>
-
-  </div>
-</body>
-  </html>
+    .bar {
+      width: 100%;
+      height: 10px;
+      background: #
