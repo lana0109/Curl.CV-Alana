@@ -72,6 +72,17 @@ h1 { margin-bottom: 4px; }
   max-height: 3000px;
 }
 
+/* ===== TEXTO OBJETIVO ===== */
+.preview {
+  color: var(--muted);
+}
+
+.read-more {
+  margin-top: 8px;
+  color: var(--green-soft);
+  font-weight: bold;
+}
+
 /* ===== EXPERIÊNCIAS ===== */
 .job { margin-bottom: 20px; }
 
@@ -85,7 +96,7 @@ h1 { margin-bottom: 4px; }
   color: var(--muted);
 }
 
-/* ===== TIMELINE CONCENTRIX ===== */
+/* ===== TIMELINE ===== */
 .timeline {
   border-left: 3px solid var(--green);
   padding-left: 20px;
@@ -117,10 +128,6 @@ h1 { margin-bottom: 4px; }
   color: var(--green-soft);
 }
 
-.icon {
-  font-size: 22px;
-}
-
 .bar {
   background: #020617;
   height: 10px;
@@ -133,7 +140,6 @@ h1 { margin-bottom: 4px; }
   height: 100%;
   width: 0;
   background: linear-gradient(90deg, var(--green), var(--green-soft));
-  border-radius: 999px;
   transition: width 1.8s ease;
 }
 </style>
@@ -149,18 +155,47 @@ h1 { margin-bottom: 4px; }
 São José dos Pinhais, PR ·
 <a href="mailto:lanasoarez2024@gmail.com">lanasoarez2024@gmail.com</a> ·
 (41) 98716-6921 ·
-<a href="https://www.linkedin.com/in/alana-soarez-ferreira-016a5b314/" target="_blank">LinkedIn</a>
+<a href="https://www.linkedin.com/in/alana-soarez-ferreira-016a5b314/" target="_blank">
+LinkedIn
+</a>
 </p>
 
-<div class="card">
-<h2>Resumo Profissional</h2>
+<!-- OBJETIVO PROFISSIONAL -->
+<div class="card accordion" id="obj">
+<div class="accordion-header">
+<h2>Objetivo Profissional</h2>
+<span>▼</span>
+</div>
+
+<div class="accordion-content">
 <p>
-Profissional com experiência em atendimento ao cliente, liderança operacional
-e análise de indicadores, atuando em ambientes de alta demanda.
+Com uma trajetória profissional construída a partir de experiências práticas
+e multidisciplinares, atuando desde a linha de frente no atendimento ao cliente
+até funções de liderança e suporte analítico, apresento-me como uma candidata
+preparada e disposta a contribuir de forma significativa com a empresa.
+</p>
+
+<p>
+Profissional especializada em atendimento ao cliente, coordenando operações
+em ambientes de alta demanda, com foco em performance, gestão de indicadores
+(TMA, absenteísmo e conversão), elaboração de relatórios e planos de ação,
+análise crítica de dados e melhoria contínua.
+</p>
+
+<p>
+Profissional pontual, com facilidade de comunicação e liderança. Domino
+Excel Avançado, Canva, Zendesk e Sabre, transitando entre áreas administrativas,
+atendimento e criação de materiais de suporte.
 </p>
 </div>
 
-<!-- EXPERIÊNCIA PROFISSIONAL -->
+<div class="preview">
+Com uma trajetória profissional construída a partir de experiências práticas...
+</div>
+<div class="read-more">Ler mais</div>
+</div>
+
+<!-- EXPERIÊNCIA -->
 <div class="card accordion" id="exp">
 <div class="accordion-header">
 <h2>Experiência Profissional</h2>
@@ -171,47 +206,30 @@ e análise de indicadores, atuando em ambientes de alta demanda.
 
 <div class="job">
 <div class="job-title">Promotora de Vendas</div>
-<div class="job-company">JTR Promoções | Apoio Terceirizado</div>
-<ul>
-<li>Atendimento ao cliente e apoio em vendas.</li>
-</ul>
+<div class="job-company">JTR Promoções</div>
 </div>
 
 <div class="job">
 <div class="job-title">Recepcionista / Garçonete</div>
-<div class="job-company">Chaplin Esfiharia | Out 2024 – Jan 2025</div>
-<ul>
-<li>Recepção, organização de fluxo e atendimento ao cliente.</li>
-</ul>
+<div class="job-company">Chaplin Esfiharia</div>
 </div>
 
 <h3 style="color:var(--green)">Concentrix</h3>
-
 <div class="timeline">
 
 <div class="job">
 <div class="job-title">Supervisor de Teleatendimento</div>
-<div class="job-company">Operação Smiles GOL</div>
-<ul>
-<li>Gestão de equipe, indicadores e performance.</li>
-<li>Monitorias, feedbacks e planos de ação.</li>
-</ul>
+<div class="job-company">Smiles GOL</div>
 </div>
 
 <div class="job">
 <div class="job-title">Suporte Técnico</div>
-<div class="job-company">Operação Smiles GOL | Set 2023 – Jun 2024</div>
-<ul>
-<li>Suporte aos agentes e criação de documentação.</li>
-</ul>
+<div class="job-company">Smiles GOL</div>
 </div>
 
 <div class="job">
 <div class="job-title">Agente de Teleatendimento</div>
-<div class="job-company">Claro RCV | Set 2022 – Set 2023</div>
-<ul>
-<li>Atendimento ao cliente e suporte administrativo.</li>
-</ul>
+<div class="job-company">Claro RCV</div>
 </div>
 
 </div>
@@ -228,53 +246,41 @@ e análise de indicadores, atuando em ambientes de alta demanda.
 <div class="accordion-content">
 
 <div class="language">
-<div class="lang-title"><span class="icon">🇧🇷</span> Português — Nativo</div>
+Português
 <div class="bar"><div class="fill" data-level="100%"></div></div>
 </div>
 
 <div class="language">
-<div class="lang-title"><span class="icon">🇺🇸</span> Inglês — Avançado</div>
+Inglês
 <div class="bar"><div class="fill" data-level="85%"></div></div>
 </div>
 
 <div class="language">
-<div class="lang-title"><span class="icon">🇫🇷</span> Francês — Básico</div>
+Francês
 <div class="bar"><div class="fill" data-level="40%"></div></div>
 </div>
 
 <div class="language">
-<div class="lang-title"><span class="icon">🇯🇵</span> Japonês — Básico</div>
+Japonês
 <div class="bar"><div class="fill" data-level="30%"></div></div>
 </div>
 
 </div>
 </div>
 
-<div class="card">
-<h2>Formação</h2>
-<p>Licenciatura em Matemática – Uniasselvi (2022)</p>
-</div>
-
 </div>
 
 <script>
-// Accordion Experiência
-document.querySelectorAll(".accordion-header").forEach(header => {
-  header.addEventListener("click", () => {
-    const acc = header.parentElement;
+document.querySelectorAll(".accordion-header, .read-more").forEach(el => {
+  el.addEventListener("click", () => {
+    const acc = el.closest(".accordion");
     acc.classList.toggle("open");
 
-    // Se for idiomas, anima as barras ao abrir
-    if (acc.id === "lang" && acc.classList.contains("open")) {
+    if (acc.id === "lang") {
       acc.querySelectorAll(".fill").forEach(bar => {
-        bar.style.width = bar.dataset.level;
-      });
-    }
-
-    // Se fechar idiomas, reseta barras
-    if (acc.id === "lang" && !acc.classList.contains("open")) {
-      acc.querySelectorAll(".fill").forEach(bar => {
-        bar.style.width = "0";
+        bar.style.width = acc.classList.contains("open")
+          ? bar.dataset.level
+          : "0";
       });
     }
   });
@@ -282,4 +288,4 @@ document.querySelectorAll(".accordion-header").forEach(header => {
 </script>
 
 </body>
-</html>
+  </html>
