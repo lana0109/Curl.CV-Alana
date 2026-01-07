@@ -1,1 +1,285 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alana Soarez Ferreira | Currículo</title>
 
+<style>
+:root {
+  --bg: #0b1210;
+  --card: #0f1f17;
+  --green: #22c55e;
+  --green-soft: #4ade80;
+  --text: #e5e7eb;
+  --muted: #9ca3af;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 24px;
+}
+
+a {
+  color: var(--green-soft);
+  text-decoration: none;
+}
+
+.card {
+  background: var(--card);
+  border-radius: 18px;
+  padding: 22px;
+  margin-bottom: 22px;
+  box-shadow: 0 15px 40px rgba(0,0,0,.6);
+}
+
+h1 { margin-bottom: 4px; }
+.subtitle { color: var(--muted); margin-bottom: 14px; }
+
+/* ===== ACCORDION ===== */
+.accordion-header {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--green);
+}
+
+.accordion-header span {
+  font-size: 20px;
+  transition: transform .4s;
+}
+
+.accordion.open .accordion-header span {
+  transform: rotate(180deg);
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .7s ease;
+}
+
+.accordion.open .accordion-content {
+  max-height: 3000px;
+}
+
+/* ===== EXPERIÊNCIAS ===== */
+.job { margin-bottom: 20px; }
+
+.job-title {
+  color: var(--green-soft);
+  font-weight: bold;
+}
+
+.job-company {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+/* ===== TIMELINE CONCENTRIX ===== */
+.timeline {
+  border-left: 3px solid var(--green);
+  padding-left: 20px;
+  margin-top: 16px;
+}
+
+.timeline .job {
+  position: relative;
+}
+
+.timeline .job::before {
+  content: "●";
+  position: absolute;
+  left: -31px;
+  top: 0;
+  color: var(--green);
+}
+
+/* ===== IDIOMAS ===== */
+.language {
+  margin-bottom: 22px;
+}
+
+.lang-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  color: var(--green-soft);
+}
+
+.icon {
+  font-size: 22px;
+}
+
+.bar {
+  background: #020617;
+  height: 10px;
+  border-radius: 999px;
+  overflow: hidden;
+  margin-top: 6px;
+}
+
+.fill {
+  height: 100%;
+  width: 0;
+  background: linear-gradient(90deg, var(--green), var(--green-soft));
+  border-radius: 999px;
+  transition: width 1.8s ease;
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+
+<h1>Alana Soarez Ferreira</h1>
+<div class="subtitle">Administração • Atendimento ao Cliente • Análise de Dados</div>
+
+<p>
+São José dos Pinhais, PR ·
+<a href="mailto:lanasoarez2024@gmail.com">lanasoarez2024@gmail.com</a> ·
+(41) 98716-6921 ·
+<a href="https://www.linkedin.com/in/alana-soarez-ferreira-016a5b314/" target="_blank">LinkedIn</a>
+</p>
+
+<div class="card">
+<h2>Resumo Profissional</h2>
+<p>
+Profissional com experiência em atendimento ao cliente, liderança operacional
+e análise de indicadores, atuando em ambientes de alta demanda.
+</p>
+</div>
+
+<!-- EXPERIÊNCIA PROFISSIONAL -->
+<div class="card accordion" id="exp">
+<div class="accordion-header">
+<h2>Experiência Profissional</h2>
+<span>▼</span>
+</div>
+
+<div class="accordion-content">
+
+<div class="job">
+<div class="job-title">Promotora de Vendas</div>
+<div class="job-company">JTR Promoções | Apoio Terceirizado</div>
+<ul>
+<li>Atendimento ao cliente e apoio em vendas.</li>
+</ul>
+</div>
+
+<div class="job">
+<div class="job-title">Recepcionista / Garçonete</div>
+<div class="job-company">Chaplin Esfiharia | Out 2024 – Jan 2025</div>
+<ul>
+<li>Recepção, organização de fluxo e atendimento ao cliente.</li>
+</ul>
+</div>
+
+<h3 style="color:var(--green)">Concentrix</h3>
+
+<div class="timeline">
+
+<div class="job">
+<div class="job-title">Supervisor de Teleatendimento</div>
+<div class="job-company">Operação Smiles GOL</div>
+<ul>
+<li>Gestão de equipe, indicadores e performance.</li>
+<li>Monitorias, feedbacks e planos de ação.</li>
+</ul>
+</div>
+
+<div class="job">
+<div class="job-title">Suporte Técnico</div>
+<div class="job-company">Operação Smiles GOL | Set 2023 – Jun 2024</div>
+<ul>
+<li>Suporte aos agentes e criação de documentação.</li>
+</ul>
+</div>
+
+<div class="job">
+<div class="job-title">Agente de Teleatendimento</div>
+<div class="job-company">Claro RCV | Set 2022 – Set 2023</div>
+<ul>
+<li>Atendimento ao cliente e suporte administrativo.</li>
+</ul>
+</div>
+
+</div>
+</div>
+</div>
+
+<!-- IDIOMAS -->
+<div class="card accordion" id="lang">
+<div class="accordion-header">
+<h2>Idiomas</h2>
+<span>▼</span>
+</div>
+
+<div class="accordion-content">
+
+<div class="language">
+<div class="lang-title"><span class="icon">🇧🇷</span> Português — Nativo</div>
+<div class="bar"><div class="fill" data-level="100%"></div></div>
+</div>
+
+<div class="language">
+<div class="lang-title"><span class="icon">🇺🇸</span> Inglês — Avançado</div>
+<div class="bar"><div class="fill" data-level="85%"></div></div>
+</div>
+
+<div class="language">
+<div class="lang-title"><span class="icon">🇫🇷</span> Francês — Básico</div>
+<div class="bar"><div class="fill" data-level="40%"></div></div>
+</div>
+
+<div class="language">
+<div class="lang-title"><span class="icon">🇯🇵</span> Japonês — Básico</div>
+<div class="bar"><div class="fill" data-level="30%"></div></div>
+</div>
+
+</div>
+</div>
+
+<div class="card">
+<h2>Formação</h2>
+<p>Licenciatura em Matemática – Uniasselvi (2022)</p>
+</div>
+
+</div>
+
+<script>
+// Accordion Experiência
+document.querySelectorAll(".accordion-header").forEach(header => {
+  header.addEventListener("click", () => {
+    const acc = header.parentElement;
+    acc.classList.toggle("open");
+
+    // Se for idiomas, anima as barras ao abrir
+    if (acc.id === "lang" && acc.classList.contains("open")) {
+      acc.querySelectorAll(".fill").forEach(bar => {
+        bar.style.width = bar.dataset.level;
+      });
+    }
+
+    // Se fechar idiomas, reseta barras
+    if (acc.id === "lang" && !acc.classList.contains("open")) {
+      acc.querySelectorAll(".fill").forEach(bar => {
+        bar.style.width = "0";
+      });
+    }
+  });
+});
+</script>
+
+</body>
+</html>
